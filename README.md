@@ -1,0 +1,2 @@
+# HaloDB
+A MPP database.
