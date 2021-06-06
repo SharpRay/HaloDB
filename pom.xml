@@ -14,8 +14,9 @@
   <url>http://www.example.com</url>
 
   <modules>
-    <module>halo-server</module>
-    <module>halo-core</module>
+      <module>halo-server</module>
+      <module>halo-core</module>
+      <module>halo-services</module>
   </modules>
 
   <properties>
@@ -29,6 +30,7 @@
       <curator.version>4.3.0</curator.version>
       <javax.validation.version>2.0.1.Final</javax.validation.version>
       <jsr305.version>2.0.1</jsr305.version>
+      <jetty.version>9.4.40.v20210413</jetty.version>
   </properties>
 
   <dependencyManagement>
@@ -138,6 +140,66 @@
           <groupId>com.google.code.findbugs</groupId>
           <artifactId>jsr305</artifactId>
           <version>${jsr305.version}</version>
+        </dependency>
+        <dependency>
+          <groupId>javax.servlet</groupId>
+          <artifactId>servlet-api</artifactId>
+          <version>2.5</version>
+        </dependency>
+        <dependency>
+          <groupId>javax.servlet</groupId>
+          <artifactId>javax.servlet-api</artifactId>
+          <version>3.1.0</version>
+        </dependency>
+        <dependency>
+          <groupId>org.eclipse.jetty</groupId>
+          <artifactId>jetty-client</artifactId>
+          <version>${jetty.version}</version>
+        </dependency>
+        <dependency>
+          <groupId>org.eclipse.jetty</groupId>
+          <artifactId>jetty-http</artifactId>
+          <version>${jetty.version}</version>
+        </dependency>
+        <dependency>
+          <groupId>org.eclipse.jetty</groupId>
+          <artifactId>jetty-io</artifactId>
+          <version>${jetty.version}</version>
+        </dependency>
+        <dependency>
+          <groupId>org.eclipse.jetty</groupId>
+          <artifactId>jetty-server</artifactId>
+          <version>${jetty.version}</version>
+        </dependency>
+        <dependency>
+          <groupId>org.eclipse.jetty</groupId>
+          <artifactId>jetty-servlet</artifactId>
+          <version>${jetty.version}</version>
+        </dependency>
+        <dependency>
+          <groupId>org.eclipse.jetty</groupId>
+          <artifactId>jetty-servlets</artifactId>
+          <version>${jetty.version}</version>
+        </dependency>
+        <dependency>
+          <groupId>org.eclipse.jetty</groupId>
+          <artifactId>jetty-proxy</artifactId>
+          <version>${jetty.version}</version>
+        </dependency>
+        <dependency>
+          <groupId>org.eclipse.jetty</groupId>
+          <artifactId>jetty-rewrite</artifactId>
+          <version>${jetty.version}</version>
+        </dependency>
+        <dependency>
+          <groupId>org.eclipse.jetty</groupId>
+          <artifactId>jetty-util</artifactId>
+          <version>${jetty.version}</version>
+        </dependency>
+        <dependency>
+          <groupId>org.eclipse.jetty</groupId>
+          <artifactId>jetty-security</artifactId>
+          <version>${jetty.version}</version>
         </dependency>
       </dependencies>
   </dependencyManagement>

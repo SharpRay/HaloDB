@@ -17,8 +17,6 @@ import org.apache.curator.framework.imps.DefaultACLProvider;
 import org.apache.curator.retry.BoundedExponentialBackoffRetry;
 import org.apache.zookeeper.ZooDefs;
 import org.apache.zookeeper.data.ACL;
-import org.rzlabs.halo.guice.JsonConfigProvider;
-import org.rzlabs.halo.guice.annotations.LazySingleton;
 import org.rzlabs.halo.util.common.StringUtils;
 import org.rzlabs.halo.util.common.lifecycle.Lifecycle;
 import org.rzlabs.halo.util.common.logger.Logger;
@@ -127,7 +125,7 @@ public class CuratorModule implements Module {
                 this.pollForInitialEnsemble();;
                 super.start();
             }
-        }
+        };
     }
 
     private void shutdown(Lifecycle lifecycle) {
